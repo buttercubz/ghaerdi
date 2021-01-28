@@ -7,7 +7,7 @@
 <script lang="js">
 let vmIndex = {
    created() {
-    setTimeout(() => this.$router.push({ path: '/me'}), 1250); 
+    setTimeout(() => this.$router.push({ path: '/me'}), 3000); 
    }
 };
 
@@ -17,14 +17,33 @@ export default vmIndex;
 <style scoped>
 .container {
   display: flex;
+  justify-content: center;
+  align-items:center;
+  text-align: center;
   width: 100vw;
   height: 100vh;
 }
 
 span {
-  margin: auto;
+  opacity: 0;
+  padding: 10px;
   text-transform: uppercase;
   letter-spacing: 20px;
   font-size: 2.5rem;
+  animation: in-and-out 3000ms ease-in;
+}
+
+@keyframes in-and-out {
+  0% {transform: scale(0) translate(0,-1000%); opacity: 0;}
+  35% {transform: scale(1) translate(0,0); opacity: 1;}
+  90% {transform: scale(1) translate(0,0); opacity: 1;}
+  100% {transform: scale(0.5) translate(0,1000%); opacity: 0.1;}
+}
+
+@media screen and (max-width: 600px) {
+  span {
+    letter-spacing: 15px;
+    font-size: 1.75rem;
+  }
 }
 </style>
