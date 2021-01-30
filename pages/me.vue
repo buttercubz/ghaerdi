@@ -18,8 +18,8 @@
         games and drawing.
       </span>
       <div class="socials" >
-        <a v-for="social in socials" :href="social.url" target="_blank">
-          <img :src="social.imgPath" :alt="social.description"/>
+        <a v-for="social in socials" :href="social.url" target="_blank" rel="noopener">
+          <img width="40" height="40" :src="social.imgPath" :alt="social.description"/>
         </a>
       </div>
     </div>
