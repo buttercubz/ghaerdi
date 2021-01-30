@@ -73,7 +73,7 @@ export default vmIndex;
   margin-left: 10vw;
   display: flex;
   flex-direction: column;
-  animation: leftSideIn 500ms ease-in;
+  animation: leftSideIn 500ms;
 }
 
 .header,
@@ -92,7 +92,7 @@ export default vmIndex;
   margin-right: 2vw;
   display: flex;
   justify-content: flex-end;
-  animation: visible 2000ms;
+  animation: visible 1500ms;
 }
 
 .socials img {
@@ -100,7 +100,7 @@ export default vmIndex;
 }
 
 @keyframes leftSideIn {
-  0% {transform: scale(0) translate(-900%, 0); opacity: 0.1;}
+  0% {transform: scale(0) translate(-800%, 0); opacity: 0.1;}
   100% {transform: scale(1) translate(0, 0); opacity: 1;}
 }
 
