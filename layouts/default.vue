@@ -27,12 +27,21 @@ body {
   height: 100vh;
 }
 
-span, p, h1, h2, h3 {
+span, p, h1, h2, h3, a {
   display: inline;
   font-size: 1rem;
   color: white;
   opacity: 0.8;
   font-weight: lighter;
+}
+
+a img {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+a img:hover {
+  opacity: 1;
 }
 
 .polygon-background {

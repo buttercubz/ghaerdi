@@ -7,7 +7,7 @@
 <script lang="js">
 let vmIndex = {
    created() {
-    setTimeout(() => this.$router.push({ path: '/me'}), 3000); 
+    setTimeout(() => this.$router.push({ path: '/me'}), 2500); 
    }
 };
 
@@ -30,7 +30,7 @@ span {
   text-transform: uppercase;
   letter-spacing: 20px;
   font-size: 2.5rem;
-  animation: in-and-out 3000ms ease-in;
+  animation: in-and-out 2500ms ease-in;
 }
 
 @keyframes in-and-out {
