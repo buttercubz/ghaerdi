@@ -15,6 +15,16 @@ export default vmIndex;
 </script>
 
 <style scoped>
+html, body, .container {
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html, body, .container::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -22,6 +32,8 @@ export default vmIndex;
   text-align: center;
   width: 100vw;
   height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 span {

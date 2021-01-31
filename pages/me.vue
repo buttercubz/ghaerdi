@@ -9,18 +9,22 @@
       <br />
       <span class="paragraph">
         I am a <h1>{{ role }}</h1>.
-        <br />
-        I am in love with TypeScript, Golang and Python. I also use technologies
-        like React and Vue.
-        <br />
-        <br />
-        Besides programming I like to spend time watching anime, playing video
-        games and drawing.
+        <br>
+        <p>
+          I am in love with TypeScript, Golang and Python. I also use technologies
+          like React and Vue.
+          <br />
+          <br />
+          Besides programming I like to spend time watching anime, playing video
+          games and drawing.
+        </p>
       </span>
       <div class="socials" >
-        <a v-for="social in socials" :href="social.url" target="_blank" rel="noopener">
-          <img width="40" height="40" :src="social.imgPath" :alt="social.description"/>
-        </a>
+        <div v-for="social in socials">
+          <a :title="social.title" :href="social.url" target="_blank" rel="noopener">
+            <img width="40" height="40" :src="social.path" :alt="social.description"/>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -28,16 +32,17 @@
 
 <script lang="js">
 class Social {
-  constructor(url, imgPath, description) {
+  constructor(title, url, path, description) {
+    this.title = title
     this.url = url;
-    this.imgPath = imgPath;
+    this.path = path;
     this.description = description;
   }
 }
 
-const github = new Social("https://github.com/ghaerdi", "/icons/github.svg", "GitHub grey icon");
-const linkedin = new Social("https://www.linkedin.com/in/ghaerdi", "/icons/linkedin.svg", "Linkedin grey icon");
-const instagram = new Social("https://www.instagram.com/ghaerdi/", "/icons/instagram.svg", "Instragram grey icon");
+const github = new Social("ghaerdi's GitHub", "https://github.com/ghaerdi", "/icons/github.svg", "GitHub white icon");
+const linkedin = new Social("ghaerdi's Linkedin", "https://www.linkedin.com/in/ghaerdi", "/icons/linkedin.svg", "Linkedin white icon");
+const instagram = new Social("ghaerdi's Instragram", "https://www.instagram.com/ghaerdi/", "/icons/instagram.svg", "Instragram white icon");
 
 const vmIndex = {
   data() {
@@ -83,7 +88,9 @@ export default vmIndex;
 }
 
 .paragraph,
-.paragraph h1 {
+.paragraph h1,
+.paragraph span,
+.paragraph p {
   font-size: 1.5rem;
 }
 
@@ -95,7 +102,7 @@ export default vmIndex;
   animation: visible 1500ms;
 }
 
-.socials img {
+.socials div {
   margin: 0 15px;
 }
 
