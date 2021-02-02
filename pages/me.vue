@@ -10,14 +10,12 @@
       <span class="paragraph">
         I am a <h1>{{ role }}</h1>.
         <br>
-        <p>
-          I am in love with TypeScript, Golang and Python. I also use technologies
-          like React and Vue.
-          <br />
-          <br />
-          Besides programming I like to spend time watching anime, playing video
-          games and drawing.
-        </p>
+        I am in love with <h2>TypeScript</h2>, <h2>Golang</h2> and <h2>Python</h2>. I also use technologies
+        like <h2>React</h2> and <h2>Vue</h2>.
+        <br />
+        <br />
+        Besides programming I like to spend time watching anime, playing video
+        games and drawing.
       </span>
       <div class="socials" >
         <div v-for="social in socials">
@@ -39,6 +37,11 @@ interface iSocial {
 }
 
 class Social implements iSocial {
+  public title: string;
+  public url: string;
+  public path: string;
+  public description: string;
+
   constructor(data: iSocial) {
     this.title = data.title
     this.url = data.url;
@@ -68,7 +71,7 @@ const instagram = new Social({
   description: "Instragram white icon"
 });
 
-const vmMe = {
+const vmMe: any = {
   data() {
     return {
       roles: ["software engineer", "software developer", "web developer"],
@@ -77,7 +80,7 @@ const vmMe = {
     };
   },
   mounted() {
-    let index: int = 0;
+    let index: number = 0;
     setInterval(() => {
       this.role = this.roles[index];
       index = index > 1 ? 0 : index += 1;
@@ -113,6 +116,8 @@ export default vmMe;
 
 .paragraph,
 .paragraph h1,
+.paragraph h2,
+.paragraph h3,
 .paragraph span,
 .paragraph p {
   font-size: 1.5rem;
@@ -135,7 +140,7 @@ export default vmMe;
   100% {transform: scale(1) translate(0, 0); opacity: 1;}
 }
 
-@keyframes visible{
+@keyframes visible {
   0% {opacity: 0;}
   50% {opacity: 0;}
   100% {opacity: 1;}

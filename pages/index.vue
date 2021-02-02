@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <span>Hello World</span>
+    <h3>Hello World</h3>
   </div>
 </template>
 
 <script lang="ts">
-const vmIndex = {
+const vmIndex: any = {
   created() {
     setTimeout(() => this.$router.push({ path: '/me'}), 2500); 
   },
@@ -26,7 +26,7 @@ export default vmIndex;
   max-height: 100vh;
 }
 
-span {
+h3 {
   opacity: 0;
   padding: 10px;
   text-transform: uppercase;

@@ -5,7 +5,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Personal web for the developer Gil Rudolf Hardi' },
+      { hid: 'description', name: 'description', content: 'Personal web for the developer Gil Rudolf Härdi' },
       { name: 'keywords', content: 'ghaerdi, Gil Rudolf Härdi, web, software, developer, fullstack, JavaScript, TypeScript, Python, Go, React, Vue' },
       { name: 'author', content: 'Gil Rudolf Härdi' },
       { name: 'manifest', content: "/site.webmanifest" },
