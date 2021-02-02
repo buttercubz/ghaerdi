@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.1",
-    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/axios": "^5.13.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12"
@@ -23,7 +23,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
-    "ts-jest": "^26.4.4",
+    "ts-jest": "^26.5.0",
     "vue-jest": "^3.0.4"
   }
 }
