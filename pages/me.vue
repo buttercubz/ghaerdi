@@ -30,21 +30,45 @@
   </div>
 </template>
 
-<script lang="js">
-class Social {
-  constructor(title, url, path, description) {
-    this.title = title
-    this.url = url;
-    this.path = path;
-    this.description = description;
+<script lang="ts">
+interface iSocial {
+  title: string,
+  url: string,
+  path: string,
+  description: string
+}
+
+class Social implements iSocial {
+  constructor(data: iSocial) {
+    this.title = data.title
+    this.url = data.url;
+    this.path = data.path;
+    this.description = data.description;
   }
 }
 
-const github = new Social("ghaerdi's GitHub", "https://github.com/ghaerdi", "/icons/github.svg", "GitHub white icon");
-const linkedin = new Social("ghaerdi's Linkedin", "https://www.linkedin.com/in/ghaerdi", "/icons/linkedin.svg", "Linkedin white icon");
-const instagram = new Social("ghaerdi's Instragram", "https://www.instagram.com/ghaerdi/", "/icons/instagram.svg", "Instragram white icon");
+const github = new Social({
+  title: "GitHub",
+  url: "https://github.com/ghaerdi",
+  path: "/icons/github.svg",
+  description: "GitHub white icon"
+});
 
-const vmIndex = {
+const linkedin = new Social({
+  title: "Linkedin",
+  url: "https://www.linkedin.com/in/ghaerdi",
+  path: "/icons/linkedin.svg",
+  description: "Linkedin white icon"
+});
+
+const instagram = new Social({
+  title: "Instragram",
+  url: "https://www.instagram.com/ghaerdi/",
+  path: "/icons/instagram.svg",
+  description: "Instragram white icon"
+});
+
+const vmMe = {
   data() {
     return {
       roles: ["software engineer", "software developer", "web developer"],
@@ -53,7 +77,7 @@ const vmIndex = {
     };
   },
   mounted() {
-    let index = 0;
+    let index: int = 0;
     setInterval(() => {
       this.role = this.roles[index];
       index = index > 1 ? 0 : index += 1;
@@ -61,7 +85,7 @@ const vmIndex = {
   },
 };
 
-export default vmIndex;
+export default vmMe;
 </script>
 
 <style>
