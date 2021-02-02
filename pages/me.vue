@@ -65,7 +65,7 @@ const linkedin = new Social({
 });
 
 const instagram = new Social({
-  title: "Instragram",
+  title: "Instagram",
   url: "https://www.instagram.com/ghaerdi/",
   path: "/icons/instagram.svg",
   description: "Instragram white icon"
