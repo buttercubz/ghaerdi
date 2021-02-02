@@ -36,10 +36,10 @@ h3 {
 }
 
 @keyframes inAndOut {
-  0% {transform: scale(0) translate(0, -1000%); opacity: 0;}
-  35% {transform: scale(1) translate(0, 0); opacity: 0.8;}
+  0% {transform: scale(0) translate(0, -500%); opacity: 0;}
+  30% {transform: scale(1) translate(0, 0); opacity: 0.8;}
   90% {transform: scale(1) translate(0, 0); opacity: 0.8;}
-  100% {transform: scale(0.5) translate(0, 1000%); opacity: 0;}
+  100% {transform: scale(0.5) translate(0, 500%); opacity: 0;}
 }
 
 @media screen and (max-width: 600px) {
