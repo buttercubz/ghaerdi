@@ -29,61 +29,42 @@
 </template>
 
 <script lang="ts">
-interface iSocial {
-  title: string,
-  url: string,
-  path: string,
-  description: string
+import { SocialLink } from "../utils/types";
+
+function newSocialLink(title: string, url?: string): SocialLink {
+  const lowerCaseTitle = title.toLowerCase();
+
+  const path = `/icons/${lowerCaseTitle}.svg`;
+  const description = `${title} white icon`;
+  url ??= `https://${lowerCaseTitle}.com/ghaerdi`;
+
+  return { title, url, path, description };
 }
 
-class Social implements iSocial {
-  public title: string;
-  public url: string;
-  public path: string;
-  public description: string;
-
-  constructor(data: iSocial) {
-    this.title = data.title
-    this.url = data.url;
-    this.path = data.path;
-    this.description = data.description;
-  }
-}
-
-const github = new Social({
-  title: "GitHub",
-  url: "https://github.com/ghaerdi",
-  path: "/icons/github.svg",
-  description: "GitHub white icon"
-});
-
-const linkedin = new Social({
-  title: "Linkedin",
-  url: "https://www.linkedin.com/in/ghaerdi",
-  path: "/icons/linkedin.svg",
-  description: "Linkedin white icon"
-});
-
-const instagram = new Social({
-  title: "Instagram",
-  url: "https://www.instagram.com/ghaerdi/",
-  path: "/icons/instagram.svg",
-  description: "Instragram white icon"
-});
+const github = newSocialLink("GitHub");
+const instagram = newSocialLink("Instagram");
+const twitter = newSocialLink("Twitter");
+const linkedin = newSocialLink("Linkedin", "https://linkedin.com/in/ghaerdi");
 
 const vmMe: any = {
   data() {
     return {
-      roles: ["software engineer", "software developer", "web developer"],
-      role: "software engineer",
-      socials: [github, linkedin, instagram]
+      roles: ["software developer", "web developer"],
+      role: null,
+      socials: [github, linkedin, instagram, twitter]
     };
   },
   mounted() {
-    let index: number = 0;
+    let index = 0;
+    this.role = this.roles[index];
+
     setInterval(() => {
+      if (index > this.roles.length-1) {
+        index = 0;
+      }
+
       this.role = this.roles[index];
-      index = index > 1 ? 0 : index += 1;
+      index++;
     }, 2000);
   },
 };
@@ -133,6 +114,12 @@ export default vmMe;
 
 .socials div {
   margin: 0 15px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.socials div:hover {
+  opacity: 0.8;
 }
 
 @keyframes leftSideIn {
@@ -143,7 +130,7 @@ export default vmMe;
 @keyframes visible {
   0% {opacity: 0;}
   50% {opacity: 0;}
-  100% {opacity: 1;}
+  100% {opacity: 0.6;}
 }
 
 @media screen and (max-width: 800px) {
