@@ -7,6 +7,7 @@
 <style>
   :root {
     --white-color: rgba(255,255,255,.8);
+    --transparent-white-color: rgba(255,255,255,.2);
     --background-color: #161617;
   }
 
