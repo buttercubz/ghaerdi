@@ -7,9 +7,9 @@
             <span class="error-message">Page not found</span>
         </div>
 
-        <errorRedirectButton route="/me" class="go-back-button">
+        <redirectButton route="/me" class="go-back-button">
             Press here to go back to home
-        </errorRedirectButton>
+        </redirectButton>
     </div>
 </template>
 

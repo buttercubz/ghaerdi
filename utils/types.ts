@@ -4,3 +4,14 @@ export interface SocialLink {
   path: string,
   description: string
 }
+
+export interface GitHubRepository {
+  name: string
+  description: string
+  language: string
+  languages: Object
+  url: string
+  updatedAt: string | Date
+  stars: number
+  watchers: number
+}
