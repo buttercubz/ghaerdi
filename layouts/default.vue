@@ -32,7 +32,7 @@
     height: 100vh;
   }
 
-  span, p, h1, h2, h3{
+  span, p, h1, h2, h3 {
     display: inline;
     font-size: 1rem;
     color: var(--white-color);
@@ -57,7 +57,7 @@
     right: 0;
   }
 
-  .btn.p-absolute.bottom{
+  .btn.p-absolute.bottom {
     bottom: 0;
   }
 
@@ -69,7 +69,7 @@
       animation: flashingText 3s infinite;
   }
 
-  @keyframes flashingText{
+  @keyframes flashingText {
       0% {color: var(--transparent-white-color)}
       50% {color: var(--white-color)}
       100% {color: var(--transparent-white-color)}
