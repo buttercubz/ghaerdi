@@ -1,6 +1,7 @@
 <template>
     <div class="socials" >
-        <a v-for="social in socials"
+        <a v-for="(social, index) in socials"
+            :key="index"
             :title="social.title"
             :href="social.url"
             target="_blank" 

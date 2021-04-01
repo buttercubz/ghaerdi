@@ -2,18 +2,28 @@
     <div class="flex-center column error-page">
         <!-- <errorRainBackground /> -->
 
-        <div class="flex-center column text">
+        <div v-if="error.statusCode === 404" class="flex-center column text">
             <span class="four-zero-four">404</span>
             <span class="error-message">Page not found</span>
         </div>
 
-        <redirectButton route="/me" class="go-back-button">
+        <div v-else class="flex-center column text">
+            <span class="error-message">An error occurred</span>
+        </div>
+
+        <NuxtLink class="btn p-absolute flashing-animation bottom left" to="/me">
             Press here to go back to home
-        </redirectButton>
+        </NuxtLink>
     </div>
 </template>
 
-<style>
+<script>
+    export default {
+        props: ["error"]
+    }
+</script>
+
+<style scoped>
     .flex-center {
         display: flex;
         justify-content: center;

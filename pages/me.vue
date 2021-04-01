@@ -24,6 +24,10 @@
       </div>
     </div>
 
+    <NuxtLink class="btn p-absolute flashing-animation bottom right" to="/projects">
+      Click here to see my projects
+    </NuxtLink >
+
   </div>
 </template>
 
