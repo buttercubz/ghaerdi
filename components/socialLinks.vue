@@ -26,7 +26,7 @@
     }
 </script>
 
-<style>
+<style scoped>
   .socials {
     margin-top: 2.5vh;
     margin-right: 2vw;

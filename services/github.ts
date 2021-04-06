@@ -1,11 +1,18 @@
 import axios from 'axios';
 import { GitHubRepository } from "../utils/types";
 
-export async function getRepositories(username: string[]): Promise<GitHubRepository[]> {
-    const response = await axios(`https://api.github.com/users/${username}/repos`);
-    let repositories = await response.data;
-    repositories = await Promise.allSettled(repositories.map(handleRepository));
-    repositories = repositories.map((repository: any) => repository.value)
+export async function getRepositories(username: string[], cachedRepositories?: object): Promise<GitHubRepository[]> {
+    let repositories: GitHubRepository[] = null!;
+
+    try {
+        const response = await axios(`https://api.github.com/users/${username}/repos`);
+        let data = await response.data;
+        data = await Promise.allSettled(data.map(handleRepository));
+        repositories = data.map((repository: any) => repository.value)
+    }
+    catch (error) {
+        if (!cachedRepositories) throw error;
+    }
 
     return repositories;
 }
@@ -23,9 +30,4 @@ async function handleRepository(repository: any): Promise<GitHubRepository> {
     };
 
     return result;
-}
-
-async function getLanguages(repositoryURL: string): Promise<object> {
-    const response = await axios(repositoryURL);
-    return await response.data;
 }

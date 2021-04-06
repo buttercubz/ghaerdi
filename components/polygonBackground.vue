@@ -2,7 +2,7 @@
     <div class="p-absolute polygon-background"></div>
 </template>
 
-<style>
+<style scoped>
     .polygon-background {
         z-index: -100;
         background-color: #202023; 
