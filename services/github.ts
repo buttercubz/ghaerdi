@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { GitHubRepository } from "../utils/types";
 
-export async function getRepositories(username: string[], cachedRepositories?: object): Promise<GitHubRepository[]> {
+export async function getRepositories(username: string[], cachedRepositories?: object[] | null): Promise<GitHubRepository[]> {
     let repositories: GitHubRepository[] = null!;
 
     try {
@@ -12,6 +12,7 @@ export async function getRepositories(username: string[], cachedRepositories?: o
     }
     catch (error) {
         if (!cachedRepositories) throw error;
+        console.log("catch")
     }
 
     return repositories;

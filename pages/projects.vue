@@ -32,7 +32,7 @@
             if (!repositories) return;
             
             this.repositories = repositories;
-            this.$store.commit("setRepositories", repositories)
+            this.$store.commit("setRepositories", repositories);
         }
     }
 </script>
