@@ -1,10 +1,9 @@
 <template>
-    <div class="polygon-background"></div>
+    <div class="p-absolute polygon-background"></div>
 </template>
 
-<style>
+<style scoped>
     .polygon-background {
-        position: absolute;
         z-index: -100;
         background-color: #202023; 
         height: 100vh;

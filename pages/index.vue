@@ -1,7 +1,7 @@
 <template>
   <div>
     <polygonBackground/>
-    <div class="container">
+    <div class="container d-flex center">
       <h3>Hello World</h3>
     </div>
   </div>
@@ -17,11 +17,6 @@
 
 <style scoped>
   .container {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    width: 100vw;
-    height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
   }
@@ -37,8 +32,8 @@
 
   @keyframes inAndOut {
     0% {transform: scale(0) translate(0, -500%); opacity: 0;}
-    30% {transform: scale(1) translate(0, 0); opacity: 0.8;}
-    90% {transform: scale(1) translate(0, 0); opacity: 0.8;}
+    30% {transform: scale(1) translate(0, 0); opacity: var(--text-opacity);}
+    90% {transform: scale(1) translate(0, 0); opacity: var(--text-opacity);}
     100% {transform: scale(0.5) translate(0, 500%); opacity: 0;}
   }
 
