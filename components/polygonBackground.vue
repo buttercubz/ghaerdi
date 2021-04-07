@@ -5,7 +5,7 @@
 <style scoped>
     .polygon-background {
         z-index: -100;
-        background-color: #202023; 
+        background-color: var(--secondary-background-color); 
         height: 100vh;
         width: 70vw;
         min-width: 800px;

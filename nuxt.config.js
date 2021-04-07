@@ -10,8 +10,8 @@ export default {
       { name: 'author', content: 'Gil Rudolf Härdi' },
       { name: 'manifest', content: "/site.webmanifest" },
       { name: 'msapplication-config', content: "/browserconfig.xml" },
-      { name: 'msapplication-TileColor', content: "#190808" },
-      { name: 'theme-color', content: "#190808" }
+      { name: 'msapplication-TileColor', content: "#161617" },
+      { name: 'theme-color', content: "#161617" }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'appicon/favicon.ico' },

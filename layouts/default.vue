@@ -8,7 +8,7 @@
   :root {
     --white-color: white;
     --primary-background-color: #161617;
-    --secondary-background-color: black;
+    --secondary-background-color: #202023;
     --default-opacity: 0.8;
     --default-icon-opacity: 0.6;
     --lower-opacity: 0.2;
