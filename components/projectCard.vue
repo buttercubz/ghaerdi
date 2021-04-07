@@ -6,8 +6,8 @@
        </div>
 
        <div class="footer d-flex justify-content-between max-width">
-            <span class="d-flex center text-small">{{ language }} <div class="circle"></div> </span>
-            <Link :href="url">
+            <span v-show="language" class="d-flex center text-small">{{ language }} <div class="circle"></div> </span>
+            <Link class="ml-auto" :href="url">
                 Click to <Img class="icons-beside-of-text" src="/icons/github.svg" size="20px" alt="github white icon" />
             </Link>
         </div>

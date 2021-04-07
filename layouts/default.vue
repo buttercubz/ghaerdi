@@ -120,6 +120,10 @@
     width: 100%;
   }
 
+  .ml-auto {
+      margin-left: auto;
+  }
+
   .circle {
     border-radius: 1000px;
   }
