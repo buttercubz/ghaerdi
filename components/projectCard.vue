@@ -1,10 +1,10 @@
 <template>
    <div class="card d-flex column justify-content-between" :href="url" target="_blank" rel="noopener">
        <div class="d-flex column">
-        <span class="header">{{ name }}</span>
-        <span class="text-small">{{ description }}</span>
-
+            <span class="header">{{ name }}</span>
+            <span class="text-small">{{ description }}</span>
        </div>
+
        <div class="footer d-flex justify-content-between max-width">
             <span class="d-flex center text-small">{{ language }} <div class="circle"></div> </span>
             <Link :href="url">
