@@ -30,7 +30,6 @@
   .socials {
     margin-top: 2.5vh;
     margin-right: 2vw;
-    animation: visible 1500ms;
   }
 
   .socials .icons {

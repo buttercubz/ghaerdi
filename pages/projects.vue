@@ -1,19 +1,20 @@
 <template>
-    <div class="d-flex align-items-center column">
-        <h2 class="header bold">Projects</h2>
+    <div class="container">
+        <div class="comming-from-right-animation d-flex align-items-center column">
+            <h2 class="header bold">Projects</h2>
 
-        <div class="repositories d-grid columns-3">
-            <projectCard v-for="(repository, index) in repositories" :key="index"
-                :name="repository.name"
-                :description="repository.description"
-                :language="repository.language"
-                :url="repository.url"
-            />
+            <div class="visible-animation repositories scroll-y d-grid columns-3">
+                <projectCard v-for="(repository, index) in repositories" :key="index"
+                    :name="repository.name"
+                    :description="repository.description"
+                    :language="repository.language"
+                    :url="repository.url"
+                />
+            </div>
+
         </div>
-
-        <NuxtLink class="btn p-fixed flashing-animation bottom left" to="/me">
-            Press here to go back to home
-        </NuxtLink >
+        
+        <buttonToHome />
     </div>
 </template>
 
@@ -39,22 +40,10 @@
 
 <style scoped>
     .repositories {
-        overflow-y: auto;
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
         width: 90vw;
         max-height: calc(100vh - 221px);
         grid-gap: 20px;
         padding: 0 10px;
     }
 
-    .repositories::-webkit-scrollbar {
-        width: 5px;
-        border-radius: 100px;
-    }
-
-    .repositories::-webkit-scrollbar-thumb{
-        background-color: var(--white-color);
-        border-radius: 100px;
-    }
 </style>

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="overflow-none">
     <polygonBackground />
 
-    <div class="container d-flex align-items-center">
+    <div class="comming-from-left-animation container d-flex align-items-center">
       <div class="about d-flex column">
         <span class="header">
           I am <h1>Gil Rudolf Härdi</h1>
@@ -20,13 +20,15 @@
           Besides programming I like to spend time watching anime, playing video
           games and drawing.
         </span>
-        <socialLinks />
+        <socialLinks class="visible-animation" />
       </div>
     </div>
 
-    <NuxtLink class="btn p-absolute flashing-animation bottom right" to="/projects">
-      Click here to see my projects
-    </NuxtLink >
+    <div class="comming-from-right-animation">
+      <NuxtLink class="btn p-absolute flashing-animation bottom right" to="/projects">
+        Click here to see my projects
+      </NuxtLink >
+    </div>
 
   </div>
 </template>
@@ -60,7 +62,6 @@
     width: 30vw;
     min-width: 550px;
     margin-left: 10vw;
-    animation: leftSideIn 500ms;
   }
 
   @media screen and (max-width: 800px) {

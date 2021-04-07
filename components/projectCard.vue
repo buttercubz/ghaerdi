@@ -7,7 +7,9 @@
        </div>
        <div class="footer d-flex justify-content-between max-width">
             <span class="d-flex center text-small">{{ language }} <div class="circle"></div> </span>
-            <Link :href="url">Click to GitHub</Link>
+            <Link :href="url">
+                Click to <Img class="icons-beside-of-text" src="/icons/github.svg" size="20px" alt="github white icon" />
+            </Link>
         </div>
    </div> 
 </template>
@@ -26,6 +28,7 @@
         -webkit-box-shadow: 0px 0px 2.5px 0px var(--white-color);
         -moz-box-shadow: 0px 0px 2.5px 0px var(--white-color);
         box-shadow: 0px 0px 2.5px 0px var(--white-color);
+        opacity: var(--default-opacity);
     }
 
     .circle {

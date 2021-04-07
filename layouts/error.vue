@@ -11,9 +11,7 @@
             <span class="error-message">An error occurred</span>
         </div>
 
-        <NuxtLink class="btn p-absolute flashing-animation bottom left" to="/me">
-            Press here to go back to home
-        </NuxtLink>
+        <buttonToHome />
     </div>
 </template>
 

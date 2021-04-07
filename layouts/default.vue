@@ -6,11 +6,13 @@
 
 <style>
   :root {
-    --white-color: rgba(255,255,255,.8);
-    --transparent-white-color: rgba(255,255,255,.2);
-    --background-color: #161617;
-    --icon-opacity: 0.6;
-    --text-opacity: 0.8;
+    --white-color: white;
+    --primary-background-color: #161617;
+    --secondary-background-color: black;
+    --default-opacity: 0.8;
+    --default-icon-opacity: 0.6;
+    --lower-opacity: 0.2;
+    --lower-icon-opacity: 0.2;
   }
 
   html {
@@ -29,16 +31,38 @@
   body {
     padding: 0;
     margin: 0;
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 
   span, p, h1, h2, h3 {
     display: inline;
     font-size: 1.5rem;
     color: var(--white-color);
+    opacity: var(--default-opacity);
     font-weight: lighter;
+  }
+
+  .overflow-none {
+    overflow: hidden;
+  }
+
+  .scroll-y {
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scroll-y::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100px;
+  }
+
+  .scroll-y::-webkit-scrollbar-thumb{
+    background-color: var(--white-color);
+    border-radius: 100px;
   }
 
   .header,
@@ -111,6 +135,7 @@
     padding: 50px;
     text-decoration: none;
     color: var(--white-color);
+    opacity: var(--default-opacity);
   }
 
   .btn.p-fixed.left,
@@ -133,12 +158,8 @@
     bottom: 0;
   }
 
-  .flashing-animation {
-      animation: flashingText 3s infinite;
-  }
-
   .icons {
-      opacity: var(--icon-opacity);
+      opacity: var(--default-icon-opacity);
   }
 
   .icons a:hover {
@@ -157,10 +178,31 @@
     font-size: 1rem;
   }
 
+  .icons-beside-of-text {
+    margin-left: 2.5px;
+    transform: translate(0, 4.5px)
+  }
+  
+  .flashing-animation {
+      animation: flashingText 3s infinite;
+  }
+
+  .comming-from-left-animation {
+    animation: leftSideIn 500ms;
+  }
+
+  .comming-from-right-animation {
+    animation: rightSideIn 500ms;
+  }
+
+  .visible-animation {
+    animation: visible 1500ms;
+  }
+
   @keyframes flashingText {
-      0% {color: var(--transparent-white-color)}
-      50% {color: var(--white-color)}
-      100% {color: var(--transparent-white-color)}
+      0% {opacity: var(--default-opacity)}
+      50% {opacity: var(--lower-opacity)}
+      100% {opacity: var(--default-opacity)}
   }
 
   @keyframes visible {
@@ -171,6 +213,11 @@
 
   @keyframes leftSideIn {
     0% {transform: scale(0) translate(-800%, 0); opacity: 0.1;}
+    100% {transform: scale(1) translate(0, 0); opacity: 1;}
+  }
+
+  @keyframes rightSideIn {
+    0% {transform: scale(0) translate(800%, 0); opacity: 0.1;}
     100% {transform: scale(1) translate(0, 0); opacity: 1;}
   }
 
