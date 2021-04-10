@@ -12,7 +12,6 @@
     --default-opacity: 0.8;
     --default-icon-opacity: 0.6;
     --lower-opacity: 0.2;
-    --lower-icon-opacity: 0.2;
     --higher-opacity: 0.9;
   }
 

@@ -1,18 +1,20 @@
 import axios from 'axios';
 import { GitHubRepository } from "../utils/types";
 
-export async function getRepositories(username: string[], cachedRepositories?: object[] | null): Promise<GitHubRepository[]> {
+export async function getRepositories(nuxt: any, username: string[], cachedRepositories?: object[] | null): Promise<GitHubRepository[]> {
     let repositories: GitHubRepository[] = null!;
 
     try {
         const response = await axios(`https://api.github.com/users/${username}/repos`);
         let data = await response.data;
         data = await Promise.allSettled(data.map(handleRepository));
-        repositories = data.map((repository: any) => repository.value)
+        repositories = data.map((repository: any) => repository.value);
     }
     catch (error) {
-        if (!cachedRepositories) throw error;
-        console.log("catch")
+        if (!cachedRepositories) {
+            nuxt.error(error);
+            throw error;
+        }
     }
 
     return repositories;

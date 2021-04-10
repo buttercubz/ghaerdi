@@ -28,7 +28,7 @@
             }
         },
         async created() {
-            const repositories = await getRepositories("ghaerdi", this.repositories);
+            const repositories = await getRepositories($nuxt, "ghaerdi", this.repositories);
 
             if (!repositories) return;
             
@@ -45,5 +45,4 @@
         grid-gap: 20px;
         padding: 0 10px;
     }
-
 </style>
