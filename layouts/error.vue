@@ -1,6 +1,8 @@
 <template>
-    <div class="container d-flex center column text-center">
-        <!-- <errorRainBackground /> -->
+    <div class="container d-flex center column text-center overflow-hidden">
+        <client-only class="overflow-hidden">
+            <errorRainBackground />
+        </client-only>
 
         <div v-if="error.statusCode === 404" class="d-flex center column text">
             <span class="four-zero-four bold">404</span>

@@ -1,22 +1,47 @@
 <template>
-    <div id="rain">
+    <div class="rain p-absolute container overflow-hidden">
     </div>
 </template>
 
 <script>
     export default {
-        created() {
+        mounted() {
+            const random = limit => Math.floor(Math.random() * limit);
+            function newRain(gouts, size, velocity) {
+                const rainBackground = document.querySelector(".rain");
+                for (let i = 0; i < gouts; i++) {
+                    const gout = newGout(size, velocity);
+                    rainBackground.appendChild(gout);
+                }
+            }
+            function newGout(size, velocity) {
+                const gout = document.createElement("DIV");
+                const color = "rgb(106, 106, 155, .5)";
+                gout.className = "gout";
+                gout.style.position = "absolute";
+                gout.style.background = "transparent"; 
+                gout.style.width =`${0.5 * size}px`;
+                gout.style.height = `${20 * size}px`;
+                gout.style.left = `${random(100)}vw`;
+
+                const start = random(5000);
+                setTimeout(() => gout.style.background = color, start);
+                gout.animate([{ transform: `translateY(${100}vh)`}], { duration: 1000 * velocity, iterations: Infinity, delay: start});
+                return gout;
+            }
+            newRain(250, 1, 1.25)
+            newRain(100, 2, 1)
+            newRain(50, 3, 0.5)
         }
     }
 </script>
 
 <style scoped>
-    .background .gout {
-        position: absolute;
-        z-index: -50;
-        width: 2px;
-        height: 20px;
-        background-color: rgb(106, 106, 155,.5);
-        margin: 10px;
+    .rain {
+        overflow: hidden;
+    }
+
+    @keyframes rain {
+        100% { transform: translate(0, 100vh)}
     }
 </style>

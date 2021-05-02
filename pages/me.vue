@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-none">
+  <div class="overflow-hidden">
     <polygonBackground />
 
     <div class="comming-from-left-animation container d-flex align-items-center">

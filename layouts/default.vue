@@ -45,7 +45,7 @@
     font-weight: lighter;
   }
 
-  .overflow-none {
+  .overflow-hidden {
     overflow: hidden;
   }
 
