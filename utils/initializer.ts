@@ -6,7 +6,7 @@ import { SocialLink } from "./types";
  * @returns {SocialLink}
  */
 
-export function newSocialLink(title: string, url?: string): SocialLink {
+export function newSocialLink(title: string, url?: URL | string): SocialLink {
   const lowerCaseTitle = title.toLowerCase();
   const path = `/icons/${lowerCaseTitle}.svg`;
   const description = `${title} white icon`;

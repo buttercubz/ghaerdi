@@ -1,12 +1,12 @@
 <template>
-    <div class="rain p-absolute container overflow-hidden">
-    </div>
+    <div class="rain p-absolute container overflow-hidden"></div>
 </template>
 
 <script>
+    import interactiveMouse from "../../utils/interactiveMouse";
+    import random from "../../utils/random";
     export default {
         mounted() {
-            const random = limit => Math.floor(Math.random() * limit);
             function newRain(gouts, size, velocity) {
                 const rainBackground = document.querySelector(".rain");
                 for (let i = 0; i < gouts; i++) {
@@ -14,10 +14,11 @@
                     rainBackground.appendChild(gout);
                 }
             }
+
             function newGout(size, velocity) {
                 const gout = document.createElement("DIV");
                 const color = "rgb(106, 106, 155, .5)";
-                gout.className = "gout";
+                gout.className = `gout-${size}`;
                 gout.style.position = "absolute";
                 gout.style.background = "transparent"; 
                 gout.style.width =`${0.5 * size}px`;
@@ -29,19 +30,20 @@
                 gout.animate([{ transform: `translateY(${100}vh)`}], { duration: 1000 * velocity, iterations: Infinity, delay: start});
                 return gout;
             }
+
             newRain(250, 1, 1.25)
             newRain(100, 2, 1)
             newRain(50, 3, 0.5)
+
+            window.addEventListener("mousemove", event => {
+                const options = {
+                    classOrId: ".rain",
+                    pageX: event.pageX,
+                    intensity: 0.075,
+                    invert: true
+                };
+                interactiveMouse(options);
+            });
         }
     }
 </script>
-
-<style scoped>
-    .rain {
-        overflow: hidden;
-    }
-
-    @keyframes rain {
-        100% { transform: translate(0, 100vh)}
-    }
-</style>
