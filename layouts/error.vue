@@ -18,20 +18,23 @@
 </template>
 
 <script>
-import interactiveMouse from "../utils/interactiveMouse";
+import { interactiveMouse, mobileDevice }  from "../utils/utils";
 export default {
   props: ["error"],
   mounted() {
-    window.addEventListener("mousemove", event => {
-      const { pageX, pageY } = event;
-      const options = {
-        classOrId: ".error",
-        intensity: 0.025,
-        pageX,
-        pageY
-      };
-      interactiveMouse(options);
-    });
+    if (!mobileDevice(navigator)) {
+      window.addEventListener("mousemove", event => {
+        const { pageX, pageY } = event;
+        const options = {
+          classOrId: ".error",
+          intensity: 0.025,
+          pageX,
+          pageY
+        };
+        interactiveMouse(options);
+      });
+    }
+
   },
 };
 </script>

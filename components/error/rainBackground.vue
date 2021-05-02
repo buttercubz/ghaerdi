@@ -3,8 +3,7 @@
 </template>
 
 <script>
-    import interactiveMouse from "../../utils/interactiveMouse";
-    import random from "../../utils/random";
+    import { interactiveMouse, random, mobileDevice} from "../../utils/utils";
     export default {
         mounted() {
             function newRain(gouts, size, velocity) {
@@ -35,15 +34,17 @@
             newRain(100, 2, 1)
             newRain(50, 3, 0.5)
 
-            window.addEventListener("mousemove", event => {
-                const options = {
-                    classOrId: ".rain",
-                    pageX: event.pageX,
-                    intensity: 0.075,
-                    invert: true
-                };
-                interactiveMouse(options);
-            });
+            if (!mobileDevice(navigator)) {
+                window.addEventListener("mousemove", event => {
+                    const options = {
+                        classOrId: ".rain",
+                        pageX: event.pageX,
+                        intensity: 0.075,
+                        invert: true
+                    };
+                    interactiveMouse(options);
+                });
+            }
         }
     }
 </script>
