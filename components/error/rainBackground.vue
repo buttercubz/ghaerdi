@@ -26,13 +26,13 @@
 
                 const start = random(5000);
                 setTimeout(() => gout.style.background = color, start);
-                gout.animate([{ transform: `translateY(${100}vh)`}], { duration: 1000 * velocity, iterations: Infinity, delay: start});
+                gout.animate([{ transform: `translateY(${100}vh)`}], { duration: 1000 * velocity, iterations: Infinity, delay: start });
                 return gout;
             }
 
             newRain(250, 1, 1.25)
             newRain(100, 2, 1)
-            newRain(50, 3, 0.5)
+            newRain(50, 3, 0.35)
 
             if (!mobileDevice(navigator)) {
                 window.addEventListener("mousemove", event => {
