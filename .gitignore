@@ -91,3 +91,5 @@ sw.*
 
 # Visual Studio
 .vs
+
+package-lock.json

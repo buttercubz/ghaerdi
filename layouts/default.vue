@@ -98,7 +98,7 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .d-flex.align-items-center {
     align-items: center;
   }
@@ -186,7 +186,7 @@
     margin-left: 2.5px;
     transform: translate(0, 4.5px)
   }
-  
+
   .flashing-animation {
       animation: flashingText 3s infinite;
   }
@@ -242,8 +242,8 @@
 
   @media screen and (max-width: 650px) {
     .header,
-    .header h1, 
-    .header h2, 
+    .header h1,
+    .header h2,
     .header h3 {
       font-size: 1.5rem;
       letter-spacing: 2.5px;

@@ -1,5 +1,5 @@
 export const state = () => ({
-    repositories:  true ? null :[{ name: "Testing", description: "Test of popola", url: "https://mmg.com/", language: "JavaScript" }]
+    repositories: null
 });
 
 export const mutations = {

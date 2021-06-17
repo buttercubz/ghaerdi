@@ -10,7 +10,7 @@
 <script>
   export default {
     created() {
-      setTimeout(() => this.$router.push({ path: '/me'}), 2500); 
+      setTimeout(() => this.$router.push({ path: '/me'}), 2500);
     },
   };
 </script>
@@ -38,7 +38,7 @@
   }
 
   @media screen and (max-width: 600px) {
-    span {
+    h3 {
       letter-spacing: 15px;
       font-size: 1.75rem;
     }

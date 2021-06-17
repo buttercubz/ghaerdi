@@ -4,16 +4,17 @@
             <h2 class="header bold">Projects</h2>
 
             <div class="visible-animation repositories scroll-y d-grid columns-3">
-                <projectCard v-for="(repository, index) in repositories" :key="index"
+                <projectCard
+                    v-for="(repository, index) in repositories"
+                    :key="index"
                     :name="repository.name"
                     :description="repository.description"
                     :language="repository.language"
                     :url="repository.url"
                 />
             </div>
-
         </div>
-        
+
         <buttonToHome />
     </div>
 </template>
@@ -28,10 +29,10 @@
             }
         },
         async created() {
-            const repositories = await getRepositories($nuxt, "ghaerdi", this.repositories);
+            const repositories = await getRepositories($nuxt, this.repositories);
 
             if (!repositories) return;
-            
+
             this.repositories = repositories;
             this.$store.commit("setRepositories", repositories);
         }

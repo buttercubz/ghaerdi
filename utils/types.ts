@@ -1,7 +1,7 @@
 export interface SocialLink {
   title: string,
-  url: URL | string,
-  path: URL | string,
+  url: string,
+  path: string,
   description: string
 }
 
@@ -9,7 +9,7 @@ export interface GitHubRepository {
   name: string
   description: string
   language: string
-  url: URL | string 
+  url: string
   updatedAt: string | Date
   stars: number
   watchers: number
