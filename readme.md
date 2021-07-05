@@ -16,6 +16,7 @@ I'm Gil and this is my GitHub account.
 ### Backend
 * Nodejs & Express
 * MongoDB
+* SQL
 </td>
 
 <td valign="top" width="25%">
@@ -23,12 +24,9 @@ I'm Gil and this is my GitHub account.
 ### Other
 
 * TypeScript
-* Python
-* Golang
-* .NET C#
 
 <td valign="top" width="25%">
-  
+
 ### Additional
 
 * Git
