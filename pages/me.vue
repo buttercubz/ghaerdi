@@ -56,6 +56,7 @@
     position: relative;
     top: 0;
     animation: slide 9s steps(3) infinite;
+    animation-delay: .5s;
   }
 
   @keyframes slide {
@@ -78,6 +79,7 @@
     border-left: solid 15px var(--white-color);
     background-color: var(--secondary-background-color);
     animation: typing 3s steps(20) infinite;
+    animation-delay: .5s;
   }
 
   @keyframes typing {
