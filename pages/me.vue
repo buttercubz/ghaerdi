@@ -46,8 +46,8 @@
     margin: 0;
     padding: 0;
     margin-left: 0.75rem;
+    text-align: left !important;
     height: 2rem;
-    line-height: 2rem;
     overflow: hidden;
   }
 
@@ -55,7 +55,7 @@
     list-style: none;
     position: relative;
     top: 0;
-    animation: slide 9s steps(3) infinite;
+    animation: slide 6s steps(3) infinite;
     animation-delay: .5s;
   }
 
@@ -76,9 +76,9 @@
     left: 0;
     height: 100%;
     width: 100%;
-    border-left: solid 15px var(--white-color);
+    border-left: solid 2px var(--white-color);
     background-color: var(--secondary-background-color);
-    animation: typing 3s steps(20) infinite;
+    animation: typing 2s steps(20) infinite;
     animation-delay: .5s;
   }
 
@@ -109,11 +109,6 @@
     .about {
       width: 95vw;
       text-align: center;
-    }
-    .dynamic-text {
-      height: 1.70rem;
-      line-height: 1.70rem;
-      margin-left: .5rem;
     }
   }
 </style>

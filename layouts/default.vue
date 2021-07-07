@@ -26,6 +26,7 @@
       'Helvetica Neue',
       Arial,
       sans-serif;
+    font-size: 16px;
   }
 
   body {
@@ -248,17 +249,13 @@
     }
   }
 
-  @media screen and (max-width: 650px) {
-    .header,
-    .header h1,
-    .header h2,
-    .header h3 {
-      font-size: 1.5rem;
-      letter-spacing: 2.5px;
+  @media screen and (max-width: 550px) {
+    html {
+      font-size: 10px;
     }
-
-    span, p, h1, h2, h3 {
-      font-size: 1.25rem;
+    img {
+      height: 25px;
+      width: 25px;
     }
   }
 </style>

@@ -26,7 +26,6 @@
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 20px;
-    font-size: 2.5rem;
     animation: inAndOut 2500ms ease-in;
   }
 
@@ -35,12 +34,5 @@
     30% {transform: scale(1) translate(0, 0); opacity: var(--text-opacity);}
     90% {transform: scale(1) translate(0, 0); opacity: var(--text-opacity);}
     100% {transform: scale(0.5) translate(0, 500%); opacity: 0;}
-  }
-
-  @media screen and (max-width: 600px) {
-    h3 {
-      letter-spacing: 15px;
-      font-size: 1.75rem;
-    }
   }
 </style>
