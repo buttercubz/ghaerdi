@@ -45,4 +45,4 @@
 
 <br>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ghaerdi&layout=compact&bg_color=102&title_color=fff&text_color=fff&hide_border=true)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ghaerdi&layout=compact&bg_color=222&title_color=fff&text_color=fff)](https://github.com/anuraghazra/github-readme-stats)
