@@ -11,7 +11,7 @@
                 Click to <Img class="icons-beside-of-text" src="/icons/github.svg" size="20px" alt="github white icon" />
             </Link>
         </div>
-   </div> 
+   </div>
 </template>
 
 <script>

@@ -5,7 +5,7 @@
             class="icons"
             :title="social.title"
             :href="social.url">
-            <img width="40" height="40" :src="social.path" :alt="social.description"/>
+            <Img size="40px" :src="social.path" :alt="social.description"/>
         </Link>
     </div>
 </template>
@@ -17,11 +17,12 @@
     const instagram = newSocialLink("Instagram");
     const twitter = newSocialLink("Twitter");
     const linkedin = newSocialLink("Linkedin", "https://linkedin.com/in/ghaerdi");
+    const dev = newSocialLink("Dev", "https://linkedin.com/ghaerdi");
 
     export default {
         data() {
             return {
-                socials: [github, linkedin, instagram, twitter]
+                socials: [github, linkedin, instagram, twitter, dev]
             }
         }
     }
