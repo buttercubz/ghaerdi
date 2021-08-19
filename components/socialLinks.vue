@@ -17,7 +17,7 @@
     const instagram = newSocialLink("Instagram");
     const twitter = newSocialLink("Twitter");
     const linkedin = newSocialLink("Linkedin", "https://linkedin.com/in/ghaerdi");
-    const dev = newSocialLink("Dev", "https://linkedin.com/ghaerdi");
+    const dev = newSocialLink("Dev", "https://dev.to/ghaerdi");
 
     export default {
         data() {
