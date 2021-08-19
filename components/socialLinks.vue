@@ -1,7 +1,8 @@
 <template>
     <div class="socials d-flex justify-content-end">
-        <Link class="icons" v-for="(social, index) in socials"
+        <Link v-for="(social, index) in socials"
             :key="index"
+            class="icons"
             :title="social.title"
             :href="social.url">
             <img width="40" height="40" :src="social.path" :alt="social.description"/>
