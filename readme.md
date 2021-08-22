@@ -1,7 +1,7 @@
 <h1 align="center">Hello World <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px" />, I'm Gil
 </h1>
 
-<h3 align="center">A passionate fullstack developer</h3>
+<h3 align="center">A fullstack developer that loves typescript and open source</h3>
 
 <div align="center">
 
@@ -27,8 +27,9 @@
 
 ![adonyssantos](https://komarev.com/ghpvc/?username=ghaerdi&label=Profile%20views&color=0e75b6&style=flat)
 
-- Typescript developer
+- Author of [code your own vue](https://dev.to/ghaerdi/code-your-own-vue-50mg)
 - Waiting for the deno era
+- Typescript developer
 - Hacking on [Piwo](https://github.com/crewdevio/piwo)
 - Learning Rust
 - Linux lover
